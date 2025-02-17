@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Speculation-api-html</title>
+</head>
+
+<body>
+    <nav class="bg-blue-500 p-4 text-white flex justify-between">
+        <a href="index.html" class="text-lg font-bold">Speculation API</a>
+        <div class="space-x-4">
+            <a href="index.html" class="hover:underline">Home</a>
+            <a href="./pages/about.html" class="hover:underline">About</a>
+            <a href="./pages/blogs.html" class="hover:underline">Blog</a>
+        </div>
+    </nav>
+    <section class="text-center py-20" id="home">
+        <h1 class="text-4xl font-bold">Welcome to Speculation API </h1>
+        <p class="mt-4 text-lg">Discover FAST and bLAZing Speed.</p>
+    </section>
+</body>
+<script>
+    if (
+        HTMLScriptElement.supports &&
+        HTMLScriptElement.supports("speculationrules")
+    ) {
+        console.log("Your browser supports the Speculation Rules API.");
+    } else {
+        console.log("Your browser does not support the Speculation Rules API.");
+    }
+</script>
+<!-- preftch will only fetch html of the page  -->
+ <!-- prerender fetch asset script css or html  -->
+<script type="speculationrules">
+    {
+   
+
+    "prerender": [
+    {
+      "urls": ["./pages/about.html", "./pages/blogs.html","/"],
+    }
+  ]
+    }
+  </script>
+
+</html>
+   <!-- "prefetch": [
+      {
+        "urls": ["./pages/about.html", "./pages/blogs.html","/"],
+      }
+    ], -->
